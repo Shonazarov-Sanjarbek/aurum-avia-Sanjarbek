@@ -3,9 +3,9 @@
   padding: 20px 0;
   border-bottom: 3px solid $yellow;
 
-  position: sticky;  // <-- sticky qilish
-  top: 0;            // yuqorida turadi
-  z-index: 1000;     // boshqa elementlar ustida chiqishi uchun
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 
   &__inner {
     display: flex;
@@ -13,6 +13,7 @@
     justify-content: space-between;
   }
 
+  /* LOGO */
   .logo {
     display: flex;
     align-items: center;
@@ -32,21 +33,78 @@
     }
   }
 
-  .nav a {
-    margin-left: 25px;
-    text-decoration: none;
-    color: $white;
-    font-weight: 600;
-    transition: 0.3s;
+  /* DESKTOP NAV */
+  .nav {
+    a {
+      margin-left: 25px;
+      text-decoration: none;
+      color: $white;
+      font-weight: 600;
+      transition: 0.3s;
 
-    &:hover {
-      color: $yellow;
+      &:hover {
+        color: $yellow;
+      }
+
+      &.active {
+        // 🔥 CLICK QILINGANDA sariq bo‘ladi
+        color: $yellow;
+      }
     }
   }
 
+  /* BURGER ICON */
+  .burger {
+    display: none;
+    font-size: 30px;
+    color: $white; // <-- Burger oq
+    cursor: pointer;
+  }
+  .close-menu{
+    display: none;
+  }
+
+  /* ------------------- */
+  /*   MOBILE STYLE      */
+  /* ------------------- */
   @media (max-width: $mobile) {
+
+    .burger {
+      display: block;
+    }
+
     .nav {
-      display: none;
+      display: flex;
+      flex-direction: column;
+      position: fixed;
+      top: 0;
+      right: -260px;
+      width: 240px;
+      height: 100vh;
+      background: $blue;
+      padding: 80px 30px;
+      transition: 0.4s ease;
+      box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
+
+      a {
+        margin: 15px 0;
+        font-size: 20px;
+      }
+
+      /* X icon */
+      .close-menu {
+        display: block;
+        position: absolute;
+        top: 25px;
+        right: 25px;
+        font-size: 28px;
+        color: $white;
+        cursor: pointer;
+      }
+
+      &.open {
+        right: 0;
+      }
     }
   }
 }

@@ -1,72 +1,59 @@
-.services-section {
+.destinations-section {
   padding: 60px 0;
-  text-align: center;
 
   h2 {
+    text-align: center;
+    margin-bottom: 40px;
     font-size: 32px;
-    margin-bottom: 30px;
-    color: $blue;
+    font-weight: 700;
   }
 
-  .carousel {
+  .destinations-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); // 2 ta yonma-yon
+    gap: 20px;
+  }
+
+  .dest-card {
     position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    height: 320px; // 🔥 baland, kvadratdan uzunroq
+    border-radius: 16px;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    cursor: pointer;
+    @include df();
 
-    .arrow {
-      background: $blue;
-      color: $white;
-      border: none;
-      padding: 10px 15px;
-      font-size: 24px;
-      cursor: pointer;
-      border-radius: 50%;
-      transition: 0.3s;
+    .overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.704); // rasmni qoraytiradi
+    }
 
-      &:hover {
-        background: $yellow;
-        color: $text-dark;
+    .text {
+      position: relative;
+      color: #fff;
+      text-align: center;
+
+      h3 {
+        font-size: 24px;
+        font-weight: 700;
       }
     }
 
-    .carousel-track-wrapper {
-      overflow: hidden;
-      width: 80%;
-      margin: 0 20px;
-
-      .carousel-track {
-        display: flex;
-      }
-
-      .card {
-        min-width: 100%;
-        height: 350px;
-        border-radius: 15px;
-        background-size: cover;
-        background-position: center;
-        display: flex;
-        align-items: flex-end;
-        justify-content: center;
-        color: $white;
-
-        h3 {
-          background: rgba(0, 0, 0, 0.5);
-          width: 100%;
-          padding: 10px;
-          margin: 0;
-          border-radius: 0 0 15px 15px;
-        }
-      }
+    &:hover {
+      transform: scale(1.03);
+      transition: 0.3s ease;
     }
   }
 
-  @media (max-width: $mobile) {
-    .carousel-track-wrapper {
-      width: 100%;
-      .card {
-        height: 200px;
-      }
+  @media (max-width: 768px) {
+    .destinations-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .dest-card {
+      height: 260px;
     }
   }
 }
