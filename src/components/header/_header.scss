@@ -1,0 +1,52 @@
+.header {
+  background: $blue;
+  padding: 20px 0;
+  border-bottom: 3px solid $yellow;
+
+  position: sticky;  // <-- sticky qilish
+  top: 0;            // yuqorida turadi
+  z-index: 1000;     // boshqa elementlar ustida chiqishi uchun
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    font-size: 28px;
+    color: $white;
+
+    span {
+      color: $yellow;
+    }
+
+    .logo-icon {
+      color: $yellow;
+      font-size: 28px;
+      margin-right: 8px;
+    }
+  }
+
+  .nav a {
+    margin-left: 25px;
+    text-decoration: none;
+    color: $white;
+    font-weight: 600;
+    transition: 0.3s;
+
+    &:hover {
+      color: $yellow;
+    }
+  }
+
+  @media (max-width: $mobile) {
+    .nav {
+      display: none;
+    }
+  }
+}

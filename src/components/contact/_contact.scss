@@ -1,0 +1,105 @@
+.contact {
+  display: flex;
+  gap: 2rem;
+  padding: 3rem 0;
+
+  .contact-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    flex: 1;
+  }
+
+  .left-card {
+    flex: 1.3;
+  }
+
+  .right-card {
+    flex: 1;
+
+    h3 {
+      margin-bottom: 0.6rem;
+    }
+
+    .muted {
+      color: #666;
+      margin-bottom: 1.2rem;
+      line-height: 1.4;
+    }
+
+    /* ==== CONTACT LINKS (phone, email, address) ==== */
+    .contact-links {
+      line-height: 1.7;
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+
+      a {
+        color: #0077ff;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      svg {
+        margin-right: 6px;
+        color: #444;
+      }
+    }
+
+    /* ==== SOCIAL ICONS (Telegram, Instagram, Facebook) ==== */
+    .social-icons {
+      display: flex;
+      gap: 12px;
+      margin: 0.6rem 0 1rem;
+
+      a {
+        font-size: 20px;
+        color: #333;
+
+        &:hover {
+          color: #0077ff;
+        }
+      }
+    }
+
+    /* ==== GOOGLE MAP ==== */
+    .google-map {
+      margin-top: 1rem;
+      width: 100%;
+      height: 200px;
+      border: 0;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+  }
+
+  .contact-form {
+    margin-top: 1rem;
+
+    input,
+    textarea {
+      border-radius: 8px !important;
+      padding: 0.65rem !important;
+    }
+  }
+}
+
+/* ==== MEDIA — MOBILE ==== */
+@media (max-width: 768px) {
+  .contact {
+    flex-direction: column;
+  }
+
+  .right-card {
+    .google-map {
+      height: 180px !important;
+    }
+  }
+}

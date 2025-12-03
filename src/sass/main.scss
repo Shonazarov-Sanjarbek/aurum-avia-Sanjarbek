@@ -1,0 +1,16 @@
+@import './mixin';
+@import './reset';
+@import './variable';
+
+
+// Page
+@import '../page/home';
+
+// Components
+@import '../components/header/header';
+@import '../components/about/about';
+@import '../components/certificates/certificates';
+@import '../components/services/services';
+@import '../components/partners/partners';
+@import '../components/contact/contact';
+@import '../components/footer/footer';

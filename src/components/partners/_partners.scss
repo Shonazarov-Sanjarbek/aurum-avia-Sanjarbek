@@ -1,0 +1,23 @@
+#partners {
+  .partners-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+
+    .partner {
+      background: $blue;
+      padding: 20px;
+      color: $white;
+      border-radius: 10px;
+      text-align: center;
+      font-weight: bold;
+      border: 2px solid $yellow;
+    }
+  }
+
+  @media (max-width: $mobile) {
+    .partners-row {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}

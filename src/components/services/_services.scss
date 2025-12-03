@@ -1,0 +1,72 @@
+.services-section {
+  padding: 60px 0;
+  text-align: center;
+
+  h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    color: $blue;
+  }
+
+  .carousel {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .arrow {
+      background: $blue;
+      color: $white;
+      border: none;
+      padding: 10px 15px;
+      font-size: 24px;
+      cursor: pointer;
+      border-radius: 50%;
+      transition: 0.3s;
+
+      &:hover {
+        background: $yellow;
+        color: $text-dark;
+      }
+    }
+
+    .carousel-track-wrapper {
+      overflow: hidden;
+      width: 80%;
+      margin: 0 20px;
+
+      .carousel-track {
+        display: flex;
+      }
+
+      .card {
+        min-width: 100%;
+        height: 350px;
+        border-radius: 15px;
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        color: $white;
+
+        h3 {
+          background: rgba(0, 0, 0, 0.5);
+          width: 100%;
+          padding: 10px;
+          margin: 0;
+          border-radius: 0 0 15px 15px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: $mobile) {
+    .carousel-track-wrapper {
+      width: 100%;
+      .card {
+        height: 200px;
+      }
+    }
+  }
+}
