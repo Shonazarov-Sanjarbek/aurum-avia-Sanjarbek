@@ -8,7 +8,7 @@ import qanot from "../../assets/qanot sharq-logo.png";
 
 export default function Partners() {
   const logos = [amadeus, uzAir, silk, centrum, easy, qanot];
-  const marqueeLogos = [...logos, ...logos]; // loop uchun ikki martta takrorlash
+  const marqueeLogos = [...logos, ...logos, ...logos]; // Silliq animatsiya uchun 3 martta takrorlash
 
   return (
     <section className="partners">
@@ -24,7 +24,7 @@ export default function Partners() {
 
         {/* 2-qator: chapdan ongga yuruvchi */}
         <div className="partners-row row-left">
-          <div className="marquee">
+          <div className="marquee marquee-left">
             {marqueeLogos.map((logo, i) => (
               <img key={`left-${i}`} src={logo} alt={`partner-${i}`} />
             ))}
@@ -33,7 +33,7 @@ export default function Partners() {
 
         {/* 3-qator: ongdan chapga yuruvchi */}
         <div className="partners-row row-right">
-          <div className="marquee">
+          <div className="marquee marquee-right">
             {marqueeLogos.map((logo, i) => (
               <img key={`right-${i}`} src={logo} alt={`partner-${i}`} />
             ))}

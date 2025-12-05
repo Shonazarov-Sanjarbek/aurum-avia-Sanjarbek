@@ -19,40 +19,54 @@
     display: flex;
     align-items: center;
     margin-bottom: 1.5rem;
+    width: 100%;
 
     img {
       height: 60px;
       width: auto;
       object-fit: contain;
       flex-shrink: 0;
-      margin-right: 2rem;
+      margin: 0 2rem;
     }
   }
 
   .row-center {
     justify-content: center;
+    overflow: visible;
   }
 
   /* Marquee uchun umumiy container */
-  .row-left .marquee {
+  .marquee {
     display: flex;
-    animation: scroll-left 10s linear infinite;
+    align-items: center;
+    width: 100%;
   }
 
-  .row-right .marquee {
-    display: flex;
-    animation: scroll-right 10s linear infinite;
+  .marquee-left {
+    animation: scroll-left 20s linear infinite;
+  }
+
+  .marquee-right {
+    animation: scroll-right 20s linear infinite;
   }
 }
 
 @keyframes scroll-left {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+  0% { 
+    transform: translateX(0); 
+  }
+  100% { 
+    transform: translateX(calc(-33.333% - 4rem)); 
+  }
 }
 
 @keyframes scroll-right {
-  0% { transform: translateX(-50%); }
-  100% { transform: translateX(0); }
+  0% { 
+    transform: translateX(calc(-33.333% - 4rem)); 
+  }
+  100% { 
+    transform: translateX(0); 
+  }
 }
 
 /* Responsive */

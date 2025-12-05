@@ -452,6 +452,7 @@ h2 {
   display: flex;
   align-items: center;
   margin-bottom: 1.5rem;
+  width: 100%;
 }
 .partners .partners-row img {
   height: 60px;
@@ -459,18 +460,22 @@ h2 {
   -o-object-fit: contain;
      object-fit: contain;
   flex-shrink: 0;
-  margin-right: 2rem;
+  margin: 0 2rem;
 }
 .partners .row-center {
   justify-content: center;
+  overflow: visible;
 }
-.partners .row-left .marquee {
+.partners .marquee {
   display: flex;
-  animation: scroll-left 10s linear infinite;
+  align-items: center;
+  width: 100%;
 }
-.partners .row-right .marquee {
-  display: flex;
-  animation: scroll-right 10s linear infinite;
+.partners .marquee-left {
+  animation: scroll-left 20s linear infinite;
+}
+.partners .marquee-right {
+  animation: scroll-right 20s linear infinite;
 }
 
 @keyframes scroll-left {
@@ -478,12 +483,12 @@ h2 {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-50%);
+    transform: translateX(calc(-33.333% - 4rem));
   }
 }
 @keyframes scroll-right {
   0% {
-    transform: translateX(-50%);
+    transform: translateX(calc(-33.333% - 4rem));
   }
   100% {
     transform: translateX(0);
