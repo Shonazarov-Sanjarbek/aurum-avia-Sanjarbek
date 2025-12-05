@@ -1,7 +1,7 @@
 import React from "react";
 import uzAir from "../../assets/Uzbekistan-Airways-logo.png";
 import silk from "../../assets/silk-avia-logo.png";
-import amadeus from "../../assets/Amadeus-logo.png";
+import amadeus from "../../assets/Amadeus-Logo.png";
 import centrum from "../../assets/Centrum_Air-logo.png";
 import easy from "../../assets/easybooking-logo.png";
 import qanot from "../../assets/qanot sharq-logo.png";
