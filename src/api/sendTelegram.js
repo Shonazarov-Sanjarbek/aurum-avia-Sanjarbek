@@ -1,6 +1,6 @@
 export async function sendTelegramMessage(values) {
-  const BOT_TOKEN = "8519091837:AAGtVCe0Pe_ftmPFJhnUl3oHDFPvP4m0wpg";
-  const CHAT_ID = "6160963553"; // o'zingning chat ID'ing
+  const BOT_TOKEN = import.meta.env.VITE_BOT_TOKEN;
+  const CHAT_ID = import.meta.env.VITE_CHAT_ID;
 
   const text = `
 📩 Yangi so‘rov!
