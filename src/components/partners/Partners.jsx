@@ -13,7 +13,7 @@ export default function Partners() {
   return (
     <section className="partners">
       <div className="container">
-        <h2>Partnyorlar</h2>
+        <h2>Hamkorlar</h2>
 
         {/* 1-qator: markazda statik */}
         <div className="partners-row row-center">
