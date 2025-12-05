@@ -88,14 +88,14 @@ export default function Contact() {
             <FaPhoneAlt /> +998 90 987 09 87
           </a>
           <br />
-          <a href="mailto:support@aerobox.uz">
-            <FaEnvelope /> support@aerobox.uz
+          <a href="mailto:AURUM_AVIA@MAIL.RU">
+            <FaEnvelope /> AURUM_AVIA@MAIL.RU
           </a>
         </p>
 
         <h3>Ijtimoiy tarmoqlar</h3>
         <div className="social-icons">
-          <a href="https://t.me/@adkhamov_987" target="_blank">
+          <a href="https://t.me/adkhamov_987" target="_blank">
             <FaTelegramPlane />
           </a>
           <a href="https://instagram.com/YOUR_INSTAGRAM" target="_blank">

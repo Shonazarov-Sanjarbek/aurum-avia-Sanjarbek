@@ -43,10 +43,10 @@ export default function Footer() {
             <a href="#">
               <FaFacebookF />
             </a>
-            <a href="https://t.me/@adkhamov_987">
+            <a href="https://t.me/" target="_blank">
               <FaInstagram />
             </a>
-            <a href="#">
+            <a href="https://t.me/adkhamov_987" target="_blank">
               <FaTelegramPlane />
             </a>
           </div>
