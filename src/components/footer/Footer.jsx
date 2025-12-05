@@ -41,11 +41,11 @@ export default function Footer() {
               </a>
             </div>
             <div className="social-icons">
-              <a href="https://t.me/" target="_blank">
-                <FaInstagram />
-              </a>
               <a href="https://t.me/adkhamov_987" target="_blank">
                 <FaTelegramPlane />
+              </a>
+              <a href="https://t.me/" target="_blank">
+                <FaInstagram />
               </a>
             </div>
           </div>

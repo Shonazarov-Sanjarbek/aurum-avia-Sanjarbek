@@ -1,14 +1,43 @@
+import React from "react";
+import uzAir from "../../assets/Uzbekistan-Airways-logo.png";
+import silk from "../../assets/silk-avia-logo.png";
+import amadeus from "../../assets/Amadeus-logo.png";
+import centrum from "../../assets/Centrum_Air-logo.png";
+import easy from "../../assets/easybooking-logo.png";
+import qanot from "../../assets/qanot sharq-logo.png";
+
 export default function Partners() {
+  const logos = [amadeus, uzAir, silk, centrum, easy, qanot];
+  const marqueeLogos = [...logos, ...logos]; // loop uchun ikki martta takrorlash
+
   return (
-    <section id="partners">
+    <section className="partners">
       <div className="container">
         <h2>Partnyorlar</h2>
 
-        <div className="partners-row">
-          <div className="partner">UzAirways</div>
-          <div className="partner">Turkish Airlines</div>
-          <div className="partner">Emirates</div>
-          <div className="partner">FlyDubai</div>
+        {/* 1-qator: markazda statik */}
+        <div className="partners-row row-center">
+          {logos.map((logo, i) => (
+            <img key={`center-${i}`} src={logo} alt={`partner-${i}`} />
+          ))}
+        </div>
+
+        {/* 2-qator: chapdan ongga yuruvchi */}
+        <div className="partners-row row-left">
+          <div className="marquee">
+            {marqueeLogos.map((logo, i) => (
+              <img key={`left-${i}`} src={logo} alt={`partner-${i}`} />
+            ))}
+          </div>
+        </div>
+
+        {/* 3-qator: ongdan chapga yuruvchi */}
+        <div className="partners-row row-right">
+          <div className="marquee">
+            {marqueeLogos.map((logo, i) => (
+              <img key={`right-${i}`} src={logo} alt={`partner-${i}`} />
+            ))}
+          </div>
         </div>
       </div>
     </section>
