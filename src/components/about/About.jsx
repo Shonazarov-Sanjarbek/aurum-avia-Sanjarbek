@@ -6,7 +6,7 @@ export default function About() {
       <div className="about__right">
         <h2>Kompaniya haqida</h2>
         <p>
-          Bizning aviakassa 15 yillik tajribaga ega bo‘lib, dunyoning barcha
+          Bizning aviakassa 5 yillik tajribaga ega bo‘lib, dunyoning barcha
           yo‘nalishlariga aviachipta taqdim etamiz. Ishonchli, qulay va tezkor
           xizmat ko‘rsatamiz.
         </p>

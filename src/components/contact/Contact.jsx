@@ -1,10 +1,9 @@
 import React from "react";
 import { Form, Input, Button, Space } from "antd";
-import { sendTelegramMessage } from "../../api/sendTelegram"; 
+import { sendTelegramMessage } from "../../api/sendTelegram";
 import {
   FaTelegramPlane,
   FaInstagram,
-  FaFacebookF,
   FaPhoneAlt,
   FaEnvelope,
   FaMapMarkerAlt,
@@ -82,7 +81,8 @@ export default function Contact() {
         <h3>Ofis manzili</h3>
 
         <p className="muted contact-links">
-          <FaMapMarkerAlt /> Toshkent, Uzbekistan
+          <FaMapMarkerAlt /> 1-дом, Чопон ота, Lutfi Street, 100173, Tashkent,
+          Узбекистан
           <br />
           <a href="tel:+998909870987">
             <FaPhoneAlt /> +998 90 987 09 87
@@ -101,17 +101,14 @@ export default function Contact() {
           <a href="https://instagram.com/YOUR_INSTAGRAM" target="_blank">
             <FaInstagram />
           </a>
-          <a href="https://facebook.com/YOUR_FACEBOOK" target="_blank">
-            <FaFacebookF />
-          </a>
         </div>
 
         <h3>Lokatsiya</h3>
 
         <iframe
           className="google-map"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2996.5589736283003!2d69.2401!3d41.2995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8b2fbbbbb!2sTashkent!5e0!3m2!1suz!2s!4v00000000"
-          allowFullScreen=""
+          src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d11991.328063660161!2d69.18234070214042!3d41.29076031283652!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1saviakassa!5e0!3m2!1sru!2s!4v1764925698087!5m2!1sru!2s"
+          allowfullscreen=""
           loading="lazy"
         ></iframe>
       </aside>
