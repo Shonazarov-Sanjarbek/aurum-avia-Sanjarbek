@@ -36,12 +36,12 @@
   /* Marquee uchun umumiy container */
   .row-left .marquee {
     display: flex;
-    animation: scroll-left 20s linear infinite;
+    animation: scroll-left 10s linear infinite;
   }
 
   .row-right .marquee {
     display: flex;
-    animation: scroll-right 20s linear infinite;
+    animation: scroll-right 10s linear infinite;
   }
 }
 
