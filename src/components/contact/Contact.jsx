@@ -98,7 +98,7 @@ export default function Contact() {
           <a href="https://t.me/adkhamov_987" target="_blank">
             <FaTelegramPlane />
           </a>
-          <a href="https://instagram.com/YOUR_INSTAGRAM" target="_blank">
+          <a href="https://instagram.com/aurum_avia" target="_blank">
             <FaInstagram />
           </a>
         </div>
