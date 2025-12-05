@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import heroImg from "../../assets/about.jpg";
+import { sendTelegramMessage } from "../../api/sendTelegram";
 
 export default function Hero() {
   const [popupOpen, setPopupOpen] = useState(false);
@@ -9,13 +10,11 @@ export default function Hero() {
     message: "",
   });
 
-  // Load from localStorage
   useEffect(() => {
     const saved = localStorage.getItem("heroForm");
     if (saved) setFormData(JSON.parse(saved));
   }, []);
 
-  // Save to localStorage
   useEffect(() => {
     localStorage.setItem("heroForm", JSON.stringify(formData));
   }, [formData]);
@@ -25,8 +24,17 @@ export default function Hero() {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+
+    const text =
+      `📩 *Yangi so‘rov!*\n\n` +
+      `👤 Ism: ${formData.name}\n` +
+      `📞 Telefon: ${formData.phone}\n` +
+      `💬 Xabar: ${formData.message}`;
+
+    await sendTelegramMessage(text);
+
     alert("So‘rov yuborildi!");
     setFormData({ name: "", phone: "", message: "" });
     setPopupOpen(false);
@@ -58,7 +66,6 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* POPUP */}
       {popupOpen && (
         <div className="popup-overlay" onClick={closePopup}>
           <div className="popup" onClick={(e) => e.stopPropagation()}>
