@@ -360,25 +360,6 @@ h2 {
     text-align: center;
   }
 }
-#certificates .cert-list {
-  display: flex;
-  gap: 20px;
-  margin-top: 20px;
-}
-#certificates .cert-list .cert-item {
-  background: #ffd000;
-  color: #1a1a1a;
-  padding: 15px 20px;
-  border-radius: 10px;
-  font-weight: bold;
-  border: 2px solid #000080;
-}
-@media (max-width: 768px) {
-  #certificates .cert-list {
-    flex-direction: column;
-  }
-}
-
 .destinations-section {
   padding: 60px 0;
 }
@@ -472,10 +453,10 @@ h2 {
   width: 100%;
 }
 .partners .marquee-left {
-  animation: scroll-left 20s linear infinite;
+  animation: scroll-left 10s linear infinite;
 }
 .partners .marquee-right {
-  animation: scroll-right 20s linear infinite;
+  animation: scroll-right 10s linear infinite;
 }
 
 @keyframes scroll-left {
