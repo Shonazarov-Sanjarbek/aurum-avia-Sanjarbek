@@ -5,9 +5,11 @@ import amadeus from "../../assets/Amadeus-Logo.png";
 import centrum from "../../assets/Centrum_Air-logo.png";
 import easy from "../../assets/easybooking-logo.png";
 import qanot from "../../assets/qanot sharq-logo.png";
+import tch from "../../assets/tch-rus-logo.png";
+import aurum from "../../assets/Aurum AIR2-logo.png";
 
 export default function Partners() {
-  const logos = [amadeus, uzAir, silk, centrum, easy, qanot];
+  const logos = [amadeus, uzAir, silk, aurum, centrum, easy, qanot, tch];
   const marqueeLogos = [...logos, ...logos, ...logos]; // Silliq animatsiya uchun 3 martta takrorlash
 
   return (
@@ -16,10 +18,12 @@ export default function Partners() {
         <h2>Hamkorlar</h2>
 
         {/* 1-qator: markazda statik */}
-        <div className="partners-row row-center">
-          {logos.map((logo, i) => (
-            <img key={`center-${i}`} src={logo} alt={`partner-${i}`} />
-          ))}
+        <div className="partners-row row-right">
+          <div className="marquee marquee-right">
+            {marqueeLogos.map((logo, i) => (
+              <img key={`right-${i}`} src={logo} alt={`partner-${i}`} />
+            ))}
+          </div>
         </div>
 
         {/* 2-qator: chapdan ongga yuruvchi */}
