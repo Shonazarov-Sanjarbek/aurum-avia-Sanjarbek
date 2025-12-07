@@ -6,7 +6,7 @@ import centrum from "../../assets/Centrum_Air-logo.png";
 import easy from "../../assets/easybooking-logo.png";
 import qanot from "../../assets/qanot sharq-logo.png";
 import tch from "../../assets/tch-rus-logo.png";
-import aurum from "../../assets/Aurum AIR2-logo.png";
+import aurum from "../../assets/Aurum-AIR2-logo.png";
 
 export default function Partners() {
   const logos = [amadeus, uzAir, silk, aurum, centrum, easy, qanot, tch];
