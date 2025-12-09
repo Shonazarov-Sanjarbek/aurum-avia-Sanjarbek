@@ -19,8 +19,8 @@ export default function Footer() {
           <p>© 2025 Aviakassa — Barcha huquqlar himoyalangan.</p>
         </div>
 
+        {/* Sayt bo‘limlari va Aloqa */}
         <div className="footer-wrapper">
-          {/* Sayt bo‘limlari */}
           <div className="footer-links">
             <h3>Sayt bo‘limlari</h3>
             <p>Bosh sahifa</p>
@@ -29,16 +29,14 @@ export default function Footer() {
             <p>Aloqa</p>
           </div>
 
-          {/* Aloqa */}
           <div className="footer-contact">
             <h3>Aloqa</h3>
             <div className="contact-item">
               <FaPhoneAlt /> <a href="tel:+998909870987">+998 90 987 09 87</a>
             </div>
             <div className="contact-item">
-              <a href="mailto:AURUM_AVIA@MAIL.RU">
-                <FaEnvelope /> AURUM_AVIA@MAIL.RU
-              </a>
+              <FaEnvelope />{" "}
+              <a href="mailto:AURUM_AVIA@MAIL.RU">AURUM_AVIA@MAIL.RU</a>
             </div>
             <div className="social-icons">
               <a href="https://t.me/adkhamov_987" target="_blank">
@@ -52,7 +50,7 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Pastki qism */}
+      {/* Footer pastki qism */}
       <div className="footer-bottom">
         Sayt <span>San_Dev</span> tomonidan yaratilgan
       </div>
