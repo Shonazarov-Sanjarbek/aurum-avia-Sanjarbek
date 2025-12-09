@@ -2,9 +2,7 @@
   position: relative;
   min-height: 500px;
   background: center/cover no-repeat;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include df;
   text-align: center;
   color: #fff;
 

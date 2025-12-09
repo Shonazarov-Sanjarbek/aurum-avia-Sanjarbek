@@ -1,137 +1,162 @@
 .footer {
-    background-color: $blue; // quyuq fon
-    color: #fff;
-    border-top: 3px solid $yellow;
-    padding: 3rem 1rem;
-    font-family: 'Arial', sans-serif;
+  background-color: $blue; // quyuq fon
+  color: #fff;
+  border-top: 3px solid $yellow;
+  padding: 3rem 1rem;
+  font-family: 'Arial', sans-serif;
 
-    .footer-container {
-        display: flex;
-        flex-direction: column;
-        gap: 2rem;
-        max-width: 1200px;
-        margin: 0 auto;
-        align-items: flex-start;
+  .footer-container {
+    @include dfc(none, none);
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: flex-start;
 
-        @media(min-width: 768px) {
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: flex-start;
-        }
-
-        // Logo qismi
-        .footer-logo {
-            .logo {
-                display: flex;
-                align-items: center;
-                font-family: "Poppins", sans-serif;
-                font-weight: 900;
-                font-size: 28px;
-                color: $white;
-
-                span {
-                    color: $yellow;
-                }
-
-                .logo-icon {
-                    color: $yellow;
-                    font-size: 28px;
-                    margin-right: 8px;
-                }
-            }
-
-            p {
-                margin-top: 10px;
-                color: #9ca3af;
-                font-size: 0.875rem;
-            }
-        }
-
-        .footer-wrapper {
-            width: 40%;
-            display: flex;
-            justify-content: space-around;
-
-            @media(min-width: 768px) {
-               width: 100%;
-            }
-        }
-
-        // Sayt bo‘limlari
-        .footer-links {
-            display: flex;
-            flex-direction: column;
-            gap: 0.5rem;
-
-            h3 {
-                margin-bottom: 0.5rem;
-                font-size: 1.1rem;
-                font-weight: 600;
-            }
-
-            p {
-                color: #9ca3af;
-                text-decoration: none;
-                transition: color 0.3s;
-
-                &:hover {
-                    color: #fff;
-                }
-            }
-        }
-
-        // Aloqa qismi
-        .footer-contact {
-            display: flex;
-            flex-direction: column;
-            gap: 0.5rem;
-
-            h3 {
-                margin-bottom: 0.5rem;
-                font-size: 1.1rem;
-                font-weight: 600;
-            }
-
-            .contact-item {
-                display: flex;
-                align-items: center;
-                gap: 0.5rem;
-                color: #9ca3af;
-                font-size: 0.95rem;
-
-                svg {
-                    color: #9ca3af;
-                }
-            }
-
-            .social-icons {
-                display: flex;
-                gap: 1rem;
-                margin-top: 0.5rem;
-
-                a {
-                    color: #9ca3af;
-                    font-size: 1.2rem;
-                    transition: color 0.3s;
-
-                    &:hover {
-                        color: #3b82f6; // hover uchun moviy rang
-                    }
-                }
-            }
-        }
+    @media(min-width: 768px) {
+      @include df(space-around, flex-start);
     }
 
-    // Footer pastki qism
-    .footer-bottom {
-        margin-top: 2rem;
-        text-align: center;
-        color: #6b7280;
-        font-size: 0.85rem;
+    // Logo qismi
+    .footer-logo {
+      .logo {
+        display: flex;
+        align-items: center;
+        font-family: "Poppins", sans-serif;
+        font-weight: 900;
+        font-size: 28px;
+        color: $white;
 
         span {
-            font-weight: 600;
-            color: #fff;
+          color: $yellow;
         }
+
+        .logo-icon {
+          color: $yellow;
+          font-size: 28px;
+          margin-right: 8px;
+        }
+      }
+
+      p {
+        margin-top: 10px;
+        color: #9ca3af;
+        font-size: 0.875rem;
+      }
     }
+
+    .footer-wrapper {
+      width: 100%;
+      @include dfc(none, none);
+      gap: 1.5rem;
+
+      @media(min-width: 768px) {
+        @include df(space-around, none);
+        width: 40%;
+      }
+    }
+
+    // Sayt bo‘limlari
+    .footer-links {
+      @include dfc(none, none);
+      gap: 0.5rem;
+
+      h3 {
+        margin-bottom: 0.5rem;
+        font-size: 1.1rem;
+        font-weight: 600;
+      }
+
+      p {
+        color: #9ca3af;
+        text-decoration: none;
+        transition: color 0.3s;
+        font-size: 0.95rem;
+
+        &:hover {
+          color: #fff;
+        }
+      }
+    }
+
+    // Aloqa qismi
+    .footer-contact {
+      @include dfc(none, none);
+      gap: 0.5rem;
+
+      h3 {
+        margin-bottom: 0.5rem;
+        font-size: 1.1rem;
+        font-weight: 600;
+      }
+
+      .contact-item {
+        @include df(none, center);
+        gap: 0.5rem;
+        color: #9ca3af;
+        font-size: 0.9rem;
+
+        svg {
+          color: #9ca3af;
+        }
+
+        a {
+          color: #9ca3af;
+          text-decoration: none;
+
+          &:hover {
+            color: #fff;
+          }
+        }
+      }
+
+      .social-icons {
+        display: flex;
+        gap: 1rem;
+        margin-top: 0.5rem;
+
+        a {
+          color: #9ca3af;
+          font-size: 1.5rem; // telefon ekranida biroz kattalashtirdim
+          transition: color 0.3s;
+
+          &:hover {
+            color: #3b82f6;
+          }
+        }
+      }
+    }
+  }
+
+  // Footer pastki qism
+  .footer-bottom {
+    margin-top: 2rem;
+    text-align: center;
+    color: #6b7280;
+    font-size: 0.85rem;
+
+    span {
+      font-weight: 600;
+      color: #fff;
+    }
+  }
+
+  // Mobil uchun qo‘shimcha moslashuv
+  @media(max-width: 767px) {
+    .footer-logo .logo {
+      font-size: 24px;
+    }
+
+    .footer-wrapper {
+      gap: 1rem;
+    }
+
+    .footer-links p,
+    .footer-contact .contact-item {
+      font-size: 0.9rem;
+    }
+
+    .footer-contact .social-icons a {
+      font-size: 1.4rem;
+    }
+  }
 }

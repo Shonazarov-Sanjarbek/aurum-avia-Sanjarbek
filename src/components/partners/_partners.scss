@@ -16,8 +16,7 @@
 
   .partners-row {
     overflow: hidden;
-    display: flex;
-    align-items: center;
+    @include df(none, center);
     margin-bottom: 1.5rem;
     width: 100%;
 
@@ -32,8 +31,7 @@
 
   /* Marquee uchun umumiy container */
   .marquee {
-    display: flex;
-    align-items: center;
+    @include df(none, center);
     width: 100%;
   }
 
@@ -47,26 +45,65 @@
 }
 
 @keyframes scroll-left {
-  0% { 
-    transform: translateX(0); 
+  0% {
+    transform: translateX(0);
   }
-  100% { 
-    transform: translateX(calc(-33.333% - 4rem)); 
+
+  100% {
+    transform: translateX(calc(-33.333% - 4rem));
   }
 }
 
 @keyframes scroll-right {
-  0% { 
-    transform: translateX(calc(-33.333% - 4rem)); 
+  0% {
+    transform: translateX(calc(-33.333% - 4rem));
   }
-  100% { 
-    transform: translateX(0); 
+
+  100% {
+    transform: translateX(0);
   }
 }
 
-/* Responsive */
+/* Responsive styles */
+@media (max-width: 1024px) {
+  .partners-row img {
+    height: 50px;
+    margin: 0 1.5rem;
+  }
+}
+
 @media (max-width: 768px) {
   .partners-row img {
     height: 40px;
+    margin: 0 1rem;
+  }
+
+  .marquee-left,
+  .marquee-right {
+    animation-duration: 12s;
+    /* mobilda biroz sekinroq animatsiya */
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    margin: 1.5rem 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .partners-row img {
+    height: 30px;
+    margin: 0 0.5rem;
+  }
+
+  .marquee-left,
+  .marquee-right {
+    animation-duration: 14s;
+    /* juda kichik ekran uchun animatsiyani sekinlashtirish */
+  }
+
+  h2 {
+    font-size: 1.2rem;
+    margin: 1rem 0;
   }
 }

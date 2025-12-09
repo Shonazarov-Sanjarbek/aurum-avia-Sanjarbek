@@ -1,7 +1,5 @@
 .about {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  @include df(space-between, center);
   gap: 40px;
   padding: 60px 0;
 

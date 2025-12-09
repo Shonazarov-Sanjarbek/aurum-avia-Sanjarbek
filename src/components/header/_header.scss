@@ -8,9 +8,7 @@
   z-index: 1000;
 
   &__inner {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    @include df(space-between, center);
   }
 
   /* LOGO */
@@ -74,8 +72,7 @@
     }
 
     .nav {
-      display: flex;
-      flex-direction: column;
+      @include dfc(none, none);
       position: fixed;
       top: 0;
       right: -260px;

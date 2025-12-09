@@ -113,8 +113,8 @@ h2 {
 }
 .header__inner {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
 }
 .header .logo {
   display: flex;
@@ -161,6 +161,8 @@ h2 {
   .header .nav {
     display: flex;
     flex-direction: column;
+    align-items: none;
+    justify-content: none;
     position: fixed;
     top: 0;
     right: -260px;
@@ -195,8 +197,8 @@ h2 {
   min-height: 500px;
   background: center/cover no-repeat;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   text-align: center;
   color: #fff;
 }
@@ -323,8 +325,8 @@ h2 {
 }
 .about {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
   gap: 40px;
   padding: 60px 0;
 }
@@ -431,6 +433,7 @@ h2 {
 .partners .partners-row {
   overflow: hidden;
   display: flex;
+  justify-content: none;
   align-items: center;
   margin-bottom: 1.5rem;
   width: 100%;
@@ -445,6 +448,7 @@ h2 {
 }
 .partners .marquee {
   display: flex;
+  justify-content: none;
   align-items: center;
   width: 100%;
 }
@@ -471,10 +475,41 @@ h2 {
     transform: translateX(0);
   }
 }
-/* Responsive */
+/* Responsive styles */
+@media (max-width: 1024px) {
+  .partners-row img {
+    height: 50px;
+    margin: 0 1.5rem;
+  }
+}
 @media (max-width: 768px) {
   .partners-row img {
     height: 40px;
+    margin: 0 1rem;
+  }
+  .marquee-left,
+  .marquee-right {
+    animation-duration: 12s;
+    /* mobilda biroz sekinroq animatsiya */
+  }
+  h2 {
+    font-size: 1.5rem;
+    margin: 1.5rem 0;
+  }
+}
+@media (max-width: 480px) {
+  .partners-row img {
+    height: 30px;
+    margin: 0 0.5rem;
+  }
+  .marquee-left,
+  .marquee-right {
+    animation-duration: 14s;
+    /* juda kichik ekran uchun animatsiyani sekinlashtirish */
+  }
+  h2 {
+    font-size: 1.2rem;
+    margin: 1rem 0;
   }
 }
 .contact {
@@ -574,6 +609,8 @@ h2 {
 .footer .footer-container {
   display: flex;
   flex-direction: column;
+  align-items: none;
+  justify-content: none;
   gap: 2rem;
   max-width: 1200px;
   margin: 0 auto;
@@ -581,8 +618,8 @@ h2 {
 }
 @media (min-width: 768px) {
   .footer .footer-container {
-    flex-direction: row;
-    justify-content: space-between;
+    display: flex;
+    justify-content: space-around;
     align-items: flex-start;
   }
 }
@@ -608,18 +645,26 @@ h2 {
   font-size: 0.875rem;
 }
 .footer .footer-container .footer-wrapper {
-  width: 40%;
+  width: 100%;
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
+  align-items: none;
+  justify-content: none;
+  gap: 1.5rem;
 }
 @media (min-width: 768px) {
   .footer .footer-container .footer-wrapper {
-    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: none;
+    width: 40%;
   }
 }
 .footer .footer-container .footer-links {
   display: flex;
   flex-direction: column;
+  align-items: none;
+  justify-content: none;
   gap: 0.5rem;
 }
 .footer .footer-container .footer-links h3 {
@@ -631,6 +676,7 @@ h2 {
   color: #9ca3af;
   text-decoration: none;
   transition: color 0.3s;
+  font-size: 0.95rem;
 }
 .footer .footer-container .footer-links p:hover {
   color: #fff;
@@ -638,6 +684,8 @@ h2 {
 .footer .footer-container .footer-contact {
   display: flex;
   flex-direction: column;
+  align-items: none;
+  justify-content: none;
   gap: 0.5rem;
 }
 .footer .footer-container .footer-contact h3 {
@@ -647,13 +695,21 @@ h2 {
 }
 .footer .footer-container .footer-contact .contact-item {
   display: flex;
+  justify-content: none;
   align-items: center;
   gap: 0.5rem;
   color: #9ca3af;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
 }
 .footer .footer-container .footer-contact .contact-item svg {
   color: #9ca3af;
+}
+.footer .footer-container .footer-contact .contact-item a {
+  color: #9ca3af;
+  text-decoration: none;
+}
+.footer .footer-container .footer-contact .contact-item a:hover {
+  color: #fff;
 }
 .footer .footer-container .footer-contact .social-icons {
   display: flex;
@@ -662,7 +718,7 @@ h2 {
 }
 .footer .footer-container .footer-contact .social-icons a {
   color: #9ca3af;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   transition: color 0.3s;
 }
 .footer .footer-container .footer-contact .social-icons a:hover {
@@ -677,4 +733,19 @@ h2 {
 .footer .footer-bottom span {
   font-weight: 600;
   color: #fff;
+}
+@media (max-width: 767px) {
+  .footer .footer-logo .logo {
+    font-size: 24px;
+  }
+  .footer .footer-wrapper {
+    gap: 1rem;
+  }
+  .footer .footer-links p,
+  .footer .footer-contact .contact-item {
+    font-size: 0.9rem;
+  }
+  .footer .footer-contact .social-icons a {
+    font-size: 1.4rem;
+  }
 }/*# sourceMappingURL=main.css.map */
