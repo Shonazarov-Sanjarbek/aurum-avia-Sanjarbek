@@ -24,43 +24,42 @@ export default function Hero() {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+const handleSubmit = async (e) => {
+  e.preventDefault();
 
-    const text =
-      `📩 *Yangi so‘rov!*\n\n` +
-      `👤 Ism: ${formData.name}\n` +
-      `📞 Telefon: ${formData.phone}\n` +
-      `💬 Xabar: ${formData.message}`;
-
-    await sendTelegramMessage(text);
+  try {
+    await sendTelegramMessage({
+      name: formData.name,
+      phone: formData.phone,
+      message: formData.message,
+    });
 
     alert("So‘rov yuborildi!");
     setFormData({ name: "", phone: "", message: "" });
     setPopupOpen(false);
-  };
+  } catch (err) {
+    alert("Xatolik yuz berdi");
+    console.error(err);
+  }
+};
+
 
   const closePopup = () => setPopupOpen(false);
 
   return (
-    <section
-      className="hero"
-      style={{ backgroundImage: `url(${heroImg})` }}
-    >
+    <section className="hero" style={{ backgroundImage: `url(${heroImg})` }}>
       <div className="hero__overlay"></div>
 
       <div className="container hero__content">
         <h1>Aurum-Aviaga hush kelibsiz</h1>
         <p>
-          Biz bilan dunyoning barcha yo'nalishlari uchun tezkor va ishonchli biletlarni xarid qilishingiz mumkin.
+          Biz bilan dunyoning barcha yo'nalishlari uchun tezkor va ishonchli
+          biletlarni xarid qilishingiz mumkin.
         </p>
 
         <div className="hero__cta">
           <p>bilet narxlarini bilish uchun quyidagi tugmani bosing</p>
-          <button
-            className="hero-btn"
-            onClick={() => setPopupOpen(true)}
-          >
+          <button className="hero-btn" onClick={() => setPopupOpen(true)}>
             Narxni bilish
           </button>
         </div>
@@ -69,7 +68,9 @@ export default function Hero() {
       {popupOpen && (
         <div className="popup-overlay" onClick={closePopup}>
           <div className="popup" onClick={(e) => e.stopPropagation()}>
-            <span className="popup-close" onClick={closePopup}>&times;</span>
+            <span className="popup-close" onClick={closePopup}>
+              &times;
+            </span>
             <h3>So‘rov qoldirish</h3>
             <form onSubmit={handleSubmit}>
               <input
